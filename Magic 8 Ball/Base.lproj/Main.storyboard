@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haz una pregunta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0Q-gg-uCt">
+                                <rect key="frame" x="10" y="94" width="394" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="textColor" red="0.22745098039215686" green="0.35686274509803922" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="6Z8-U2-D7U">
+                                <rect key="frame" x="87" y="174" width="240" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="HdX-hc-YqV"/>
+                                    <constraint firstAttribute="height" constant="200" id="dE7-LQ-nHg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfL-Ef-OD9">
+                                <rect key="frame" x="157" y="394" width="100" height="35"/>
+                                <color key="backgroundColor" red="1" green="0.89803921568627454" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Sc1-wD-zTB"/>
+                                    <constraint firstAttribute="height" constant="35" id="Z2W-HS-4fk"/>
+                                </constraints>
+                                <color key="tintColor" red="0.12156862745098039" green="0.27450980392156865" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pregunta"/>
+                                <connections>
+                                    <action selector="askButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WWG-lY-NbZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.6470588235294118" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bfL-Ef-OD9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6kO-Vm-WEf"/>
+                            <constraint firstItem="k0Q-gg-uCt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="8Qi-lI-bSG"/>
+                            <constraint firstItem="k0Q-gg-uCt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Dkb-Gw-eyQ"/>
+                            <constraint firstItem="k0Q-gg-uCt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Iiw-Tb-0Uf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k0Q-gg-uCt" secondAttribute="trailing" constant="10" id="KFu-6L-z1w"/>
+                            <constraint firstItem="6Z8-U2-D7U" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pxO-3n-DFh"/>
+                            <constraint firstItem="6Z8-U2-D7U" firstAttribute="top" secondItem="k0Q-gg-uCt" secondAttribute="bottom" constant="50" id="v6E-En-6bH"/>
+                            <constraint firstItem="bfL-Ef-OD9" firstAttribute="top" secondItem="6Z8-U2-D7U" secondAttribute="bottom" constant="20" id="x4Q-EL-fxU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="magicBallImageView" destination="6Z8-U2-D7U" id="g3d-0a-tth"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball" width="128" height="128"/>
+    </resources>
+</document>
